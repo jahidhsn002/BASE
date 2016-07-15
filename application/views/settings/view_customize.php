@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <div class="container-fluid">
-	<h2>Users Table</h2>
+	<h2>Software Customize</h2>
 	<?php if($success != ''){ ?>
 		<div class="text-center text-success" style="margin-bottom: 5px;margin-top: 5px;">
 			<div class="bg-success" style="border: 1px solid #cccccc;padding: 5px;"><b><?php echo $success; ?></b></div>
@@ -15,26 +15,23 @@
 		<table class="table white table-bordered">
 			<thead>
 				<tr>
-					<th data-priority="3">ID</th>
 					<th data-priority="1">Name</th>
-					<th data-priority="4">Email</th>
-					<th data-priority="5">Roll</th>
-					<th data-priority="2" class="text-right">Action</th>
+					<th data-priority="2" class="text-right">Value</th>
 				</tr>
 			</thead>
 			<tbody>
-				{user}
+				{setting}
 				<tr>
-					<td><?php echo $prefix; ?>{id}</td>
 					<td>{name}</td>
-					<td>{email}</td>
-					<td>{roll}</td>
 					<td class="text-right">
-						<a class="btn btn-sm btn-primary" href="<?php echo site_url('user/edit'); ?>/{id}"><span class="glyphicon glyphicon-edit"></span></a>
-						<a class="btn btn-sm btn-danger" href="<?php echo site_url('user/remove'); ?>/{id}"><span class="glyphicon glyphicon-remove-circle"></span></a>
+						<?php echo form_open('settings/customize', array('class'=>'form-inline white')); ?>
+							<input type="hidden" name="sid" value="{id}">
+							<input type="text" name="value" class="form-control" id="Name" value="{value}">
+							<input class="btn btn-success" type="submit" name="submit" value="Change" class="form-control">
+						<?php echo form_close(); ?>
 					</td>
 				</tr>
-				{/user}
+				{/setting}
 			</tbody>
 		</table>
 	</div>

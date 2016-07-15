@@ -10,6 +10,7 @@ class User extends Secure {
 		$this->check('user');
 		
 		$data['user'] = $this->Db->get_array_select('users', 'name,email,roll,id');
+		$data['prefix'] = $this->Db->get_value_where_select('settings', array('id'=>1), 'value');
 		
 		$data['success'] = '';
 		$data['error'] = '';
@@ -101,6 +102,8 @@ class User extends Secure {
 	}
 	
 	public function remove($uid = null){
+		
+		$this->check('user/remove');
 		
 		$check = $this->Db->get_where_limit('users', array('id' => $uid), 1);
 		

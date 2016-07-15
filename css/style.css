@@ -3,6 +3,12 @@ body{
 	background: #ffffff;
 }
 
+input[type="text"],input[type="submit"],textarea,input[type="password"],input[type="email"]{
+	border-radius: 1px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
 #body{
 	background: #f8f8f8;
 	border-left: 1px solid #e7e7e7;

@@ -16,6 +16,14 @@ class Db extends CI_Model {
         return $query->result();
     }
 	
+	public function get_value_where_select($table, $query, $field){
+        $query = $this->db
+						->where($query)
+						->limit(1)
+						->get($table);
+        return $query->result()[0]->$field;
+    }
+	
 	public function get_where_array_limit($table, $query, $limit){
         $query = $this->db
 						->where($query)

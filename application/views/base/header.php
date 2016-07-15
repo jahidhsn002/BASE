@@ -11,6 +11,7 @@
 
 		<!-- Bootstrap -->
 		<link href="<?php echo site_url("css/bootstrap.min.css"); ?>" rel="stylesheet">
+		<link href="<?php echo site_url("css/rwd-table.min.css"); ?>" rel="stylesheet">
 		<link href="<?php echo site_url("css/style.css"); ?>" rel="stylesheet">
 
 		<!--[if lt IE 9]>
@@ -37,8 +38,8 @@
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Table
 								<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Manage</a></li>
-									<li><a href="#">Add Table</a></li>
+									<li><a href="<?php echo site_url("table"); ?>">Manage</a></li>
+									<li><a href="<?php echo site_url("table/add"); ?>">New Table</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -46,7 +47,7 @@
 								<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="#">Manage</a></li>
-									<li><a href="#">Add Food</a></li>
+									<li><a href="#">New Food</a></li>
 									<li><a href="#">Category</a></li>
 									<li><a href="#">Printing</a></li>
 								</ul>
@@ -74,18 +75,18 @@
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
 								<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Store</a></li>
-									<li><a href="#">Basic</a></li>
-									<li><a href="#">Customize</a></li>
-									<li><a href="#">Fundamentals</a></li>
+									<li><a href="<?php echo site_url("settings"); ?>">Basic</a></li>
+									<li><a href="<?php echo site_url("settings/store"); ?>">Store</a></li>
+									<li><a href="<?php echo site_url("settings/customize"); ?>">Customize</a></li>
+									<li><a href="<?php echo site_url("settings/fundamentals"); ?>">Fundamentals</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Users
 								<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Manage</a></li>
-									<li><a href="#">Set User</a></li>
+									<li><a href="<?php echo site_url("user"); ?>">Manage</a></li>
+									<li><a href="<?php echo site_url("user/add"); ?>">Set User</a></li>
 									<li><a href="#">Help Doc</a></li>
 									<li><a href="#">About Us</a></li>
 								</ul>
